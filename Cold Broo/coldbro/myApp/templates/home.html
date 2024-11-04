@@ -1,0 +1,47 @@
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Hecho Por David Arturo Martinez Muraira -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Page</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{% static 'css/newhome.css' %}">
+        <script src="{% static 'js/saveValue.js' %}" defer></script>
+    </head>
+    <body>
+        <div class="header">
+            <img alt="Company logo" src="https://storage.googleapis.com/a1aa/image/N5H62dO46N4fTKIfEAulgMdbJit6gaM0OOtAxq6E4wG0iNlTA.jpg"/>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'cafes' %}">Cafes</a>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>About Us</h1>
+            <p>
+                Somos una compañia de cafe 100% casero creado en casa con ingredientes 100% naturales y especialmente escogidos para que nuestro producto tenga el mejor sabor,
+                y que nuestros clientes puedan disfrutar de un delicioso cafe casero en cualquier momento  y lugar.
+
+            </p>
+        </div>
+        <div class="mix-and-match">
+            <h2>Mix and Match</h2>
+            <div class="packages">
+                <div class="package">
+                    <img alt="Placeholder image" src="https://storage.googleapis.com/a1aa/image/Xv4ZZrId4MbqNVUfFw0LZYSIse953RDf0i7FwsumDefpWspcC.jpg"/>
+                    <p>6-Pack</p>
+                </div>
+                <div class="package">
+                    <img alt="Placeholder image" src="https://storage.googleapis.com/a1aa/image/Xv4ZZrId4MbqNVUfFw0LZYSIse953RDf0i7FwsumDefpWspcC.jpg"/>
+                    <p>12-Pack</p>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="{% url 'cafes' %}" class="button" onclick="saveAmount(6, event)">6</a>
+            <a href="{% url 'cafes' %}" class="button" onclick="saveAmount(12, event)">12</a>
+        </div>
+    </body>
+    </html>
